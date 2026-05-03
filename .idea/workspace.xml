@@ -5,29 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d996b00c-85cc-455d-a9ba-788159a6a8f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/controller/TaskController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/dto/CreateTaskRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/dto/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/dto/TaskResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/dto/UpdateStatusRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/entity/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/enums/TaskPriority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/enums/TaskStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/exception/TaskNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/repository/TaskRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/service/TaskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/service/impl/TaskServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/TaskApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/TaskApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-api/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-api/src/test/java/com/taskflow/api/TaskApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-api/src/test/java/com/taskflow/api/TaskControllerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/mapper/TaskMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/dto/CreateTaskRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/dto/CreateTaskRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/dto/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/dto/ErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/dto/TaskResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/dto/TaskResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/entity/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/entity/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/service/impl/TaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-api/src/main/java/com/taskflow/api/service/impl/TaskServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/task-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-api/src/test/java/com/taskflow/api/TaskControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-api/src/test/java/com/taskflow/api/TaskControllerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>

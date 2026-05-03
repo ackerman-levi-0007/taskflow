@@ -1,6 +1,7 @@
 package com.taskflow.api.service.impl;
 
 import com.taskflow.api.dto.CreateTaskRequest;
+import com.taskflow.api.mapper.TaskMapper;
 import com.taskflow.api.dto.TaskResponse;
 import com.taskflow.api.entity.Task;
 import com.taskflow.api.enums.TaskStatus;
@@ -18,16 +19,17 @@ import org.springframework.transaction.annotation.Transactional;
 public class TaskServiceImpl implements TaskService {
 
     private final TaskRepository taskRepository;
+    private final TaskMapper taskMapper;
 
     @Override
     @Transactional
     public TaskResponse create(
             CreateTaskRequest request
     ) {
-        Task task = Task.from(request);
+        Task task = taskMapper.toEntity(request);
         task.setStatus(TaskStatus.PENDING);
         Task createdTask = taskRepository.save(task);
-        return TaskResponse.from(createdTask);
+        return taskMapper.toResponse(createdTask);
     }
 
     @Override
@@ -38,7 +40,7 @@ public class TaskServiceImpl implements TaskService {
         Task task = taskRepository.findById(id)
                 .orElseThrow(() -> new TaskNotFoundException(id));
 
-        return TaskResponse.from(task);
+        return taskMapper.toResponse(task);
     }
 
     @Override
@@ -47,10 +49,9 @@ public class TaskServiceImpl implements TaskService {
             TaskStatus status,
             Pageable pageable
     ) {
-        Page<TaskResponse> taskResponses = (status != null)
-                ? taskRepository.findByStatus(status, pageable).map(TaskResponse::from)
-                : taskRepository.findAll(pageable).map(TaskResponse::from);
-        return taskResponses;
+        return (status != null)
+                ? taskRepository.findByStatus(status, pageable).map(taskMapper::toResponse)
+                : taskRepository.findAll(pageable).map(taskMapper::toResponse);
     }
 
     @Override
@@ -63,7 +64,7 @@ public class TaskServiceImpl implements TaskService {
                 .orElseThrow(() -> new TaskNotFoundException(id));
         task.setStatus(status);
         Task updatedTask = taskRepository.save(task);
-        return TaskResponse.from(updatedTask);
+        return taskMapper.toResponse(updatedTask);
     }
 
     @Override

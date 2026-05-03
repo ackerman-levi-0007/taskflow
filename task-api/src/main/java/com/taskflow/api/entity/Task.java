@@ -1,6 +1,5 @@
 package com.taskflow.api.entity;
 
-import com.taskflow.api.dto.CreateTaskRequest;
 import com.taskflow.api.enums.TaskPriority;
 import com.taskflow.api.enums.TaskStatus;
 import jakarta.persistence.*;
@@ -39,13 +38,5 @@ public class Task {
     @PreUpdate
     protected void onUpdate(){
         this.updatedAt = Instant.now();
-    }
-
-    public static Task from(CreateTaskRequest createTaskRequest){
-        return Task.builder()
-                .title(createTaskRequest.getTitle())
-                .description(createTaskRequest.getDescription())
-                .priority(createTaskRequest.getPriority())
-                .build();
     }
 }

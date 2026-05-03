@@ -28,7 +28,7 @@ class TaskControllerTests {
 	MockMvc mvc;
 
 	@MockBean
-	TaskService _taskService;
+	TaskService taskService;
 
 	@Test
 	void post_returns201_andLocationHeader() throws Exception{
@@ -42,11 +42,11 @@ class TaskControllerTests {
 				.updatedAt(Instant.now())
 				.build();
 
-		when(_taskService.create(any())).thenReturn(response);
+		when(taskService.create(any())).thenReturn(response);
 
 		mvc.perform(post("/api/v1/tasks")
 				.contentType(MediaType.APPLICATION_JSON)
-				.content("{\"title\":\"t\",\"description\":\"d\",\"taskPriority\":\"MEDIUM\"}")
+				.content("{\"title\":\"t\",\"description\":\"d\",\"priority\":\"MEDIUM\"}")
 		)
 				.andExpect(status().isCreated())
 				.andExpect(header().string("Location", containsString("/api/v1/tasks/1")));

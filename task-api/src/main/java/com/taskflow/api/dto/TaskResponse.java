@@ -22,17 +22,5 @@ public class TaskResponse {
     private TaskPriority priority;
     private Instant createdAt;
     private Instant updatedAt;
-
-    public static TaskResponse from(Task task){
-        return TaskResponse.builder()
-                .id(task.getId())
-                .title(task.getTitle())
-                .description(task.getDescription())
-                .status(task.getStatus())
-                .priority(task.getPriority())
-                .createdAt(task.getCreatedAt())
-                .updatedAt(task.getUpdatedAt())
-                .build();
-    }
 }
 
